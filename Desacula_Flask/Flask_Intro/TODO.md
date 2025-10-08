@@ -1,0 +1,4 @@
+- [x] Add CSS link to contact.html
+- [x] Enhance contact.css with icons, better layout, and aesthetics
+- [x] Update contact.css to Cyberpunk 2077 theme
+- [x] Apply Cyberpunk theme to whole website

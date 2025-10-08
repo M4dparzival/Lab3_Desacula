@@ -1,0 +1,151 @@
+body {
+  font-family: 'Courier New', monospace;
+  background: url('CYBER2.gif') no-repeat center center fixed;
+  background-size: cover;
+  color: #00ffff;
+  margin: 0;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 255, 0.03) 0px,
+    rgba(0, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid #ff00ff;
+  box-shadow: 0 0 10px #ff00ff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+nav a {
+  color: #00ffff;
+  margin: 0 15px;
+  font-size: 24px;
+  text-decoration: none;
+  text-shadow: 0 0 5px #00ffff;
+  transition: text-shadow 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p.email::before {
+  content: "📧";
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+p.facebook::before {
+  content: "📘";
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 10px #8a2be2;
+  padding: 10px;
+}
+
+p:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 2.5em;
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 10px #8a2be2;
+  border-bottom: 2px solid #00ffff;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  text-align: center;
+  animation: glow 2s ease-in-out infinite alternate;
+  padding: 10px;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; }
+  to { text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+}
+
+.contact-container {
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #00ffff;
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+  animation: fadeIn 1s ease-in, pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff; }
+  50% { box-shadow: 0 0 30px #00ffff, 0 0 60px #ff00ff; }
+  100% { box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+a {
+  color: #00ff00;
+  text-decoration: none;
+  text-shadow: 0 0 5px #00ff00;
+  transition: text-shadow 0.3s ease;
+}
+
+a:hover {
+  text-decoration: none;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
